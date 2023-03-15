@@ -5,6 +5,7 @@ import com.example.superkassa.model.ObjJson;
 import com.example.superkassa.service.EventService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/modify")
 public class EventController {
 
+    @Autowired
     private final EventService service;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
