@@ -22,9 +22,7 @@ public class EventService {
         ObjJson obj = entity.getObj();
         long current = obj.getCurrent();
 
-        long sum = current + add;
-
-        obj.setCurrent(sum);
+        obj.setCurrent(current + add);
         entity.setObj(obj);
 
         return repository.save(entity).getObj();

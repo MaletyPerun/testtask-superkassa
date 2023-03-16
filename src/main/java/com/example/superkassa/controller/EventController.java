@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
@@ -21,10 +22,11 @@ public class EventController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<ObjJson> saveEntity(@RequestBody @Valid EventEntityDto entityDto) {
+    public ResponseEntity<ObjJson> saveEntity(@RequestBody @Validated EventEntityDto entityDto) {
         return ResponseEntity.ok(service.saveEntity(entityDto));
     }
 
+    // TODO: 16.03.2023 for test - remove
     @GetMapping
     public ResponseEntity<ObjJson> getEntity(@RequestParam int id) {
         return ResponseEntity.ok(service.getEntity(id));
