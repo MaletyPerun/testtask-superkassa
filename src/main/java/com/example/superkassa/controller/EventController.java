@@ -22,9 +22,4 @@ public class EventController {
     public ResponseEntity<ObjJson> saveEntity(@RequestBody @Valid EventEntityDto entityDto) {
         return ResponseEntity.ok(service.saveEntity(entityDto));
     }
-
-    @GetMapping
-    public ResponseEntity<ObjJson> getEntity(@RequestParam int id) {
-        return ResponseEntity.ok(service.getEntity(id));
-    }
 }

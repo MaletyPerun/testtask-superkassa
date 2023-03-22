@@ -29,8 +29,4 @@ public class EventService {
 
         return repository.save(entity).getObj();
     }
-
-    public ObjJson getEntity(int id) {
-        return repository.getReferenceById(id).getObj();
-    }
 }
