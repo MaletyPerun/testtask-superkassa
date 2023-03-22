@@ -11,7 +11,6 @@ import org.hibernate.type.SqlTypes;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Builder
 @Entity
 @Table(name = "sk_example_table")
 public class EventEntity {
