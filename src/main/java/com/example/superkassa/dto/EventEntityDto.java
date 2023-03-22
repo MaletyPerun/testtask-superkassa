@@ -1,6 +1,5 @@
 package com.example.superkassa.dto;
 
-import com.example.superkassa.model.EventEntity;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
