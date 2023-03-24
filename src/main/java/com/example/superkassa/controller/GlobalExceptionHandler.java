@@ -1,5 +1,6 @@
-package com.example.superkassa.repository;
+package com.example.superkassa.controller;
 
+import com.example.superkassa.repository.NotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
@@ -18,9 +19,9 @@ public class GlobalExceptionHandler {
 
     private final ErrorAttributes errorAttributes;
 
-    @ExceptionHandler(BadRequestException.class)
+    @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(HttpStatus.I_AM_A_TEAPOT)
-    protected ResponseEntity<Object> handleConflict(WebRequest request, BadRequestException e) {
+    protected ResponseEntity<Object> handleConflict(WebRequest request, NotFoundException e) {
         return createResponseEntity(request, e.getOptions(), e.getMessage(), HttpStatus.I_AM_A_TEAPOT);
     }
 
