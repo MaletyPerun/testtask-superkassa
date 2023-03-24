@@ -1,5 +1,6 @@
 package com.example.superkassa.repository;
 
+import com.example.superkassa.controller.AppException;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.http.HttpStatus;
 

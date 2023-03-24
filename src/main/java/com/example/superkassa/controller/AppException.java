@@ -1,4 +1,4 @@
-package com.example.superkassa.repository;
+package com.example.superkassa.controller;
 
 import lombok.Getter;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
